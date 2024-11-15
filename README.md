@@ -40,6 +40,11 @@ American Style Options are more difficult to manage for the Market Makers / Writ
 
 ## Implementation
 
+- Oracle
+- Order book
+- Liquidation
+- Exercise
+
 ## No Front End - Maybe Ever
 
 This Protocol has three kinds of participants and none of them would use a GUI:
