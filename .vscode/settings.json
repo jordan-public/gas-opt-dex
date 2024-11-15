@@ -1,7 +1,9 @@
 {
-    "cSpell.words": [
-        "Homomorphic",
-        "permissionlessly",
-        "undercollateralized"
-    ]
+  "cSpell.words": [
+    "Homomorphic",
+    "permissionlessly",
+    "undercollateralized"
+  ],
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
+  "solidity.packageDefaultDependenciesDirectory": "lib"
 }
