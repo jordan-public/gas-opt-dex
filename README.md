@@ -38,6 +38,15 @@ American Style Options are more difficult to manage for the Market Makers / Writ
 
 ## Implementation
 
+## No Front End - Maybe Ever
+
+This Protocol has three kinds of participants and none of them would use a GUI:
+- Option Buyers (web3 DApps, protocols), which hedge,
+- Option Writers (Market Makers / Underwriters), which speculate,
+- Option Liquidators, which generate revenue keeping the Option Writers honest
+
+In addition, anyone, usually the above three kinds of users can create a new Options Contract permissionlessly at any time.
+
 ## Further work
 
 - Dashboard
