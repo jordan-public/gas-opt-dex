@@ -28,11 +28,13 @@ Liquidator permissionlessly. The liquidation imposes a penalty paid by the holde
 
 There are Gas tokens priced at the value of Gas already, such as CHI and GST2. However, purchasing Gas at Spot price can get expensive for the web3 application. In addition, the application has to worry about purchasing the tokens at the right time and then have locked funds in such tokens.
 
-Call Options are more natural for the described use case. The web3 applications / protocols would usually purchase out-of-the-money Gas Call Options and use them as insurance policy. The Options would become valuable only when the Gas price spikes above the Strike Price of the Option.
+Call Options are more natural for the described use case. The web3 applications / protocols would usually purchase out-of-the-money Gas Call Options and use them as insurance policy. The Options would become valuable only when the Gas price spikes above the Strike Price of the Option:
+![Option](./demo/Option.png)
 
 ### American Style Option
 
-Our protocol provides American Style Options, which are ones that can be Exercised at any time, with intention to do so when the Gas price spikes. European Style Options would impose risk to the holder, as the Gas price may spike and retreat before the Expiration of the Option, and as such compensate no value to the holder.
+Our protocol provides American Style Options, which are ones that can be Exercised at any time, with intention to do so when the Gas price spikes. European Style Options would impose risk to the holder, as the Gas price may spike and retreat before the Expiration of the Option, and as such compensate no value to the holder:
+![Value](./demo/Value.png)
 
 American Style Options are more difficult to manage for the Market Makers / Writers, but in our use case, this is almost a must.
 
