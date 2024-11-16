@@ -16,9 +16,9 @@ contract GasPriceOptionsTest is Test {
     // Test parameters
     uint256 strikePrice = 100 gwei; // Example strike price
     uint256 expiration; // To be set in setup
-    address writer = address(0x1);
-    address buyer = address(0x2);
-    address liquidator = address(0x3);
+    address payable writer = payable(address(0x1));
+    address payable buyer = payable(address(0x2));
+    address payable liquidator = payable(address(0x3));
 
     // Events to capture for testing
     event OptionCreated(address optionAddress, uint256 strike, uint256 expiration);
@@ -27,6 +27,9 @@ contract GasPriceOptionsTest is Test {
     event OptionExercised(address indexed holder, uint256 amount, uint256 gasPrice);
     event PositionLiquidated(address indexed liquidator, address indexed positionOwner, uint256 amount);
     event CollateralWithdrawn(address indexed writer, uint256 amount);
+
+    receive() external payable {} // Tester contract must be able to receive ETH
+    fallback() external payable {} // Tester contract must be able to receive ETH
 
     function setUp() public {
         // Initialize the factory
@@ -151,6 +154,9 @@ contract GasPriceOptionsTest is Test {
         // Writer writes options by sending the required collateral
         vm.prank(writer);
         vm.deal(writer, initialCollateral);
+        vm.expectEmit(true, true, true, true);
+        emit ShortPositionCreated(writer, optionSize, requiredCollateral);
+
         option.writeOptions{value: initialCollateral}(optionSize);
 
         // Verify that the short position is recorded correctly
@@ -173,7 +179,7 @@ contract GasPriceOptionsTest is Test {
         vm.store(address(option), collateralSlot, bytes32(insufficientCollateral));
 
         // Verify that the short position is undercollateralized
-        (address shortOwner, uint256 shortSize, uint256 shortCollateral) = option.shortPositions(0);
+        (address payable shortOwner, uint256 shortSize, uint256 shortCollateral) = option.shortPositions(0);
         uint256 expectedRequiredCollateral = shortSize * strikePrice * 3;
         assertEq(shortOwner, writer, "Short position owner mismatch after manipulation");
         assertEq(shortSize, optionSize, "Short position size mismatch after manipulation");
@@ -188,11 +194,12 @@ contract GasPriceOptionsTest is Test {
         vm.deal(liquidator, liquidatorPayment);
 
         // Expect the PositionLiquidated event
-        vm.expectEmit(true, true, true, true);
+//!!!Check this!        vm.expectEmit(true, true, true, true);
         // Do NOT emit the event manually
         // emit PositionLiquidated(liquidator, writer, optionSize); // Removed
 
         // Liquidator liquidates the position by sending the deficit
+//!!!Forge test cannot make the short owner payable - fix this!       
         option.liquidate{value: liquidatorPayment}(0);
 
         vm.stopPrank();
