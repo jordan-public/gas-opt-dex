@@ -15,6 +15,10 @@ contract Deploy is Script {
         gasPriceOptionsFactory = new GasPriceOptionsFactory();
         console.log("GasPriceOptionsFactory deployed at address:", address(gasPriceOptionsFactory));
 
+        // Create a new option via the factory
+        address option = gasPriceOptionsFactory.createOption(100 gwei, block.timestamp + 7 days);
+        console.log("Sample Option created at address:", option);
+
         vm.stopBroadcast();
     }
 }
