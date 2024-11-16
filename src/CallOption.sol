@@ -1,5 +1,5 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
 /**
  * @title CallOption
@@ -39,7 +39,7 @@ contract CallOption {
         uint256 price;          // Price per option in wei
     }
 
-    // Mappings to keep track of positions
+    // Arrays to keep track of positions
     ShortPosition[] public shortPositions;
     LongPosition[] public longPositions;
 
@@ -221,7 +221,7 @@ contract CallOption {
         // Check collateralization
         uint256 requiredCollateral = position.size * strike * COLLATERAL_FACTOR;
         if (position.collateral < requiredCollateral) {
-            // Liquidator pays ETH to take over the position
+            // Calculate the deficit
             uint256 deficit = requiredCollateral - position.collateral;
             require(msg.value >= deficit, "Insufficient ETH to cover deficit");
 
