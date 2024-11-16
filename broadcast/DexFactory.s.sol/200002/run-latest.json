@@ -1,0 +1,31 @@
+{
+  "transactions": [
+    {
+      "hash": "0x9fbebf524167a2dd07bdd7d58bfb457b95f10562b2572fadd47654b711d92f67",
+      "transactionType": "CREATE",
+      "contractName": "DexFactory",
+      "contractAddress": "0xe53f8e8a492e85e87ae553acfb676ceff50740a6",
+      "function": null,
+      "arguments": null,
+      "transaction": {
+        "from": "0x823ef872d97f3cffd1e3d491c9560eb0d3886d56",
+        "gas": "0x21de9",
+        "value": "0x0",
+        "input": "0x6080604052348015600f57600080fd5b5060f78061001e6000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c80633fb5c1cb1460415780638381f58a146053578063d09de08a14606d575b600080fd5b6051604c3660046083565b600055565b005b605b60005481565b60405190815260200160405180910390f35b6051600080549080607c83609b565b9190505550565b600060208284031215609457600080fd5b5035919050565b60006001820160ba57634e487b7160e01b600052601160045260246000fd5b506001019056fea2646970667358221220d33a2b0489352fe235a9bd85036e3452baddc177fffe4fccbb6750e754ba026b64736f6c634300081a0033",
+        "nonce": "0x0",
+        "chainId": "0x30d42"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0x9fbebf524167a2dd07bdd7d58bfb457b95f10562b2572fadd47654b711d92f67"
+  ],
+  "returns": {},
+  "timestamp": 1731731062,
+  "chain": 200002,
+  "commit": "8d297ff"
+}
