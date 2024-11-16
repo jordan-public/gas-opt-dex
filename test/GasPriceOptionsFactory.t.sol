@@ -48,6 +48,10 @@ contract GasPriceOptionsTest is Test {
         option = CallOption(payableOptionAddress);
     }
 
+    function testBlockBasefee() public view {
+        assert(block.basefee > 0);
+    }
+
     /**
      * @dev Test the creation of an option.
      */
