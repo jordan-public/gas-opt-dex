@@ -11,7 +11,7 @@ The contracts have been deployed on the following EVM blockchains at the followi
 - NeonEVM: 
 - Rome: 
 *- Bitkub: 
-*- Kinto: 
+?- Kinto: 
 - Polygon zkEVM: 
 - Gnosis: 
 - Hedera: 
