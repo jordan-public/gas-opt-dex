@@ -6,4 +6,4 @@
 source .env
 
 # To deploy and verify our contract
-forge script script/DexFactory.s.sol:Deploy --rpc-url "https://alfajores-forno.celo-testnet.org" --sender $SENDER --private-key $PRIVATE_KEY --broadcast -vvvv
+forge script script/GasPriceOptionsFactory.s.sol:Deploy --rpc-url "https://alfajores-forno.celo-testnet.org" --sender $SENDER --private-key $PRIVATE_KEY --broadcast -vvvv
