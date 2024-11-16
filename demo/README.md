@@ -18,7 +18,7 @@ The contracts have been deployed on the following EVM blockchains at the followi
 - Hedera: 0x7Fb7CC0d318897FFBa25349Ac71a37cd2114Eb69
 - Flare Coston2: 0xE71C57852392123BbE527A16271D2E6395c66e8b
 - Celo Alfajores: 0xE71C57852392123BbE527A16271D2E6395c66e8b
-!- Rootstock: 
+- Rootstock: ?
 - Morph Holesky: 0xe7CbA446621716e949e770204c6d672C66E62Ab1
 - Linea Sepolia: 0xE53F8E8a492e85E87AE553AcFb676cEfF50740A6
 - Zircuit: 0xe7CbA446621716e949e770204c6d672C66E62Ab1
