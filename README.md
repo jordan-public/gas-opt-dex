@@ -1,6 +1,8 @@
 # gas-opt-dex
 EVM Gas Options Decentralized Exchange
 
+The demo video and deployment addresses can be found [here](./demo/README.md).
+
 ## Abstract
 
 This is an Ethereum Gas Options Decentralized Exchange (DEX). Web3 applications can purchase Call options on the EVM Gas price in order to hedge the price of the Gas
