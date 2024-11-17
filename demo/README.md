@@ -11,8 +11,8 @@ The contracts have been deployed on the following EVM blockchains at the followi
 - NeonEVM Devnet: 0xCE1De27853eF6C70cd4c35FB94147F9ED25315E0
 - Rome: 0xE53F8E8a492e85E87AE553AcFb676cEfF50740A6
 - Unichain Sepolia: 0xe7CbA446621716e949e770204c6d672C66E62Ab1
-- Bitkub: ?
-- Kinto: ?
+- Bitkub: <I cannot create an account!>
+- Kinto: <I cannot pass KYC>
 - Polygon zkEVM Cardona: 0x9C31112c0323E22dF4AAA995c556c9c4b7cCD442
 - Gnosis Chiado: 0xE71C57852392123BbE527A16271D2E6395c66e8b
 - Hedera: 0x7Fb7CC0d318897FFBa25349Ac71a37cd2114Eb69
