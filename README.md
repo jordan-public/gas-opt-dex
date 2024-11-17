@@ -42,10 +42,13 @@ American Style Options are more difficult to manage for the Market Makers / Writ
 
 ## Implementation
 
-- Oracle
-- Order book
-- Liquidation
-- Exercise
+The smart contracts are written in Solidity. The protocol needs a price oracle for the EVM Gas price in order to enforce collateralization. We are only interested in the Base Fee and not the "tip" as that is discretionary to the user to speed up their transaction. Luckily the EVM already provides this oracle using ```block.basefee```.
+
+The DEX is implemented as Order Book, as we are worried that the erratic price of EVM Gas is not suitable for AMM formulas.
+
+Liquidation is performed if the Option Writer falls below a constant (currently 3 times) amount of collateralization.
+
+Option Exercise can be performed at any time at the current price, unless the Option expires in which case the oracle price is used to settle. Calls to Exercise result in immediate payout to the caller, so the workflow is just to put a conditional Exercise ahead of Gas-demanding calls.
 
 ## No Front End - Maybe Never
 
