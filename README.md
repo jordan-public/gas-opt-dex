@@ -1,3 +1,13 @@
+[This project, (PetroETH Option DEX)](https://ethglobal.com/showcase/petroeth-option-dex-vo05p) won the following prizes at the [ETHGlobal Bangkok 2024](https://ethglobal.com/events/bangkok) hackathon:
+
+🥇 [Rome Protocol - Best Use of Rome Protocol 1st place](https://ethglobal.com/showcase/petroeth-option-dex-vo05p">)
+
+🏆 [Nethermind - Build an Opinionated DEX](https://ethglobal.com/showcase/petroeth-option-dex-vo05p)
+
+🥈 [Uniswap Foundation - Unichain 2nd place](https://ethglobal.com/showcase/petroeth-option-dex-vo05p)
+
+🏆 [Linea - Best Project Deployed on Linea and MetaMask JSON-RPC API](https://ethglobal.com/showcase/petroeth-option-dex-vo05p)
+
 # gas-opt-dex
 EVM Gas Options Decentralized Exchange
 
