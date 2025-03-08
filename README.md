@@ -8,8 +8,7 @@
 
 🏆 [Linea - Best Project Deployed on Linea and MetaMask JSON-RPC API](https://ethglobal.com/showcase/petroeth-option-dex-vo05p)
 
-# gas-opt-dex
-EVM Gas Options Decentralized Exchange
+# EVM Gas Options Decentralized Exchange
 
 The demo video and deployment addresses can be found [here](./demo/README.md).
 
